@@ -4,13 +4,21 @@ def selection_random():
     with open("./archivos/data.txt", "r", encoding="utf-8") as f:
         data = []
         for name in f:
-            data.append(name.upper())
+            data.append(name)
         
-        print(random.choice(data.replace ))
+        print(data)
+        WORD = random.choice(data)
+        print(WORD)
+        letter = str(input("Ingresa una letra: "))
+        print(letter)
+        if WORD == letter:
+            print("Bien hecho!")
+        else:
+            print("No es la palabra")
 
 
-def ahorcado(letter):
-    assert 2 > len(letter) > 0 and letter.isalpha(), "Ingresesa solamente una letra"
+# def ahorcado(letter):
+#     assert 2 > len(letter) > 0 and letter.isalpha(), "Ingresesa solamente una letra"
 
 
 def run():
@@ -24,8 +32,8 @@ def run():
     """
     print(menu)
     selection_random()
-    letter = input("Ingresa una letra: ")
-    ahorcado(letter)
+    # letter = input("Ingresa una letra: ")
+    # ahorcado(letter)
 
 
 if __name__ == '__main__':
